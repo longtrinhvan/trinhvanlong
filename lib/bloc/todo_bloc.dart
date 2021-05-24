@@ -1,18 +1,28 @@
 import 'dart:async';
-import 'dart:convert';
 import 'dart:math';
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
-// import 'package:flutter_app/base/base_bloc.dart';
-// import 'package:flutter_app/base/bloc_event.dart';
-// import 'package:flutter_app/event/todo_list.dart';
-// import 'package:flutter_app/model/todo.dart';
 import 'package:trinhvanlong/base/base_bloc.dart';
 import 'package:trinhvanlong/base/bloc_event.dart';
-import 'package:trinhvanlong/event/todo_list.dart';
 import 'package:trinhvanlong/model/todo.dart';
 
 
+class AddTodoEvent extends BaseEvent {
+
+  String title;
+  String subTitle;
+  AddTodoEvent(this.title,this.subTitle);
+}
+
+class UpdateTodoEvent extends BaseEvent {
+  int index;
+  String title;
+  String subTitle;
+  UpdateTodoEvent(this.index,this.title,this.subTitle);
+}
+
+class DeleteTodoEvent extends BaseEvent {
+  Todo todo;
+  DeleteTodoEvent(this.todo);
+}
 class TodoBloc extends BaseBloc {
   StreamController _titleController = new StreamController();
   StreamController _subtitleController = new StreamController();

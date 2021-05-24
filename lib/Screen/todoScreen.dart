@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
-// import 'package:flutter_app/bloc/todo_bloc.dart';
-// import 'package:flutter_app/event/todo_list.dart';
-// import 'package:flutter_app/model/todo.dart';
 import 'package:trinhvanlong/bloc/todo_bloc.dart';
-import 'package:trinhvanlong/event/todo_list.dart';
 import 'package:trinhvanlong/model/todo.dart';
+
 
 class Screen extends StatefulWidget {
   @override
